@@ -14,14 +14,18 @@ let oneEuroIs = {
 }
 
 // Dollar to yen
-const fromDollarToYen = function(valueInDollar) {   
-    let valueInYen = valueInDollar * (156.5/1.07);
+const fromDollarToYen = function(valueInDollar) {
+    // Convertimos el valor a Yen
+    let valueInYen = valueInDollar * (oneEuroIs.JPY/ oneEuroIs.USD);
+    // Retornamos el valor en yen
     return valueInYen;
 }
 
 // Yen to Pound
 const fromYenToPound = function(valueInYen) {
-    let valueInPound = valueInYen*(0.87/156.5);
+    // Convertimos el valor a Pound
+    let valueInPound = valueInYen* (oneEuroIs.GBP/oneEuroIs.JPY)
+    // Retornamos el valor en pound
     return valueInPound;
 }
 
